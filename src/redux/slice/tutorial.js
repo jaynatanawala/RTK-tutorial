@@ -9,9 +9,9 @@ import {
 
 export const addNewTutorial = createAsyncThunk(
   "tutorial/create",
-  async ({ title, description }) => {
+  async ({ title, description, userId }) => {
     // api call
-    const result = await addTutorial({ title, description });
+    const result = await addTutorial({ title, description, userId });
     return result.data;
   }
 );
